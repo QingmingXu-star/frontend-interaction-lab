@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Bistro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="menu-container" class="text-center w-full max-w-md p-8 z-10">
+        <h2 id="step-title" class="step-label">Loading...</h2>
+        <div id="options-list" class="space-y-6"></div>
+    </div>
+
+    <div id="toaster-stage">
+        <div class="toaster-wrapper" id="toaster-wrapper">
+            <div class="toaster-slot">
+                <div id="order-token"></div>
+
+                <div id="receipt" class="receipt-paper is-hidden">
+                    <div class="receipt-content">
+                        <h3 id="receipt-header" class="receipt-header">RECEIPT</h3>
+                        <ul id="final-list" class="receipt-list"></ul>
+                    </div>
+                    <div id="receipt-footer" class="receipt-footer">Thank you for dining.</div>
+                </div>
+            </div>
+            <p id="status-text" class="status-label">Preparing...</p>
+        </div>
+    </div>
+
+    <script type="module" src="./dist/app.js"></script>
+</body>
+</html>

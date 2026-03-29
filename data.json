@@ -1,0 +1,78 @@
+{
+  "settings": {
+    "paperSize": "A4",
+    "marginType": "normal",
+    "currency": "¥"
+  },
+  "copy": {
+    "stageLabel": "Stage",
+    "receiptTitle": "RECEIPT",
+    "receiptFooter": "Thank you for dining.",
+    "totalLabel": "TOTAL",
+    "preparing": "Preparing...",
+    "completed": "Enjoy your meal",
+    "loadErrorPrefix": "加载失败: "
+  },
+  "menu": [
+    {
+      "title": "Starter",
+      "options": [
+        {
+          "id": "starter-onion-soup",
+          "name": "法式洋葱汤",
+          "price": 45
+        },
+        {
+          "id": "starter-smoked-salmon",
+          "name": "烟熏三文鱼",
+          "price": 68
+        },
+        {
+          "id": "starter-caesar-salad",
+          "name": "凯撒沙拉",
+          "price": 42
+        }
+      ]
+    },
+    {
+      "title": "Main Course",
+      "options": [
+        {
+          "id": "main-beef-wellington",
+          "name": "惠灵顿牛排",
+          "price": 288
+        },
+        {
+          "id": "main-seared-seabass",
+          "name": "香煎鲈鱼",
+          "price": 158
+        },
+        {
+          "id": "main-truffle-pasta",
+          "name": "松露意面",
+          "price": 128
+        }
+      ]
+    },
+    {
+      "title": "Dessert",
+      "options": [
+        {
+          "id": "dessert-lava-cake",
+          "name": "熔岩巧克力",
+          "price": 58
+        },
+        {
+          "id": "dessert-tiramisu",
+          "name": "提拉米苏",
+          "price": 52
+        },
+        {
+          "id": "dessert-creme-brulee",
+          "name": "法式烤布蕾",
+          "price": 48
+        }
+      ]
+    }
+  ]
+}
