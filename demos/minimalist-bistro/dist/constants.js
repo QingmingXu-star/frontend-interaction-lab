@@ -23,5 +23,8 @@ export const UI_CLASSES = {
     optionLeaving: "is-leaving",
     receiptHidden: "is-hidden",
     receiptRising: "receipt-paper--rising",
-    toasterShifted: "toaster-wrapper--shifted"
+    toasterShifted: "toaster-wrapper--shifted",
+    toasterStageVisible: "toaster-stage--visible",
+    tokenVisible: "token--visible",
+    tokenDropping: "token--dropping"
 };

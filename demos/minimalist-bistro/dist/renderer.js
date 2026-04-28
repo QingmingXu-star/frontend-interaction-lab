@@ -27,8 +27,7 @@ export function renderStep(elements, stepData, stepIndex, stageLabel, onSelect) 
     stepData.options.forEach((item, index) => {
         const button = document.createElement("button");
         button.type = "button";
-        button.className = `block w-full py-4 text-lg text-gray-700 transition-all border border-transparent 
-                            hover:text-black hover:bg-white hover:border-gray-200 hover:shadow-sm ${UI_CLASSES.optionEntering}`;
+        button.className = `menu-option-btn ${UI_CLASSES.optionEntering}`;
         button.style.animationDelay = `${index * 0.15}s`;
         button.innerText = item.name;
         button.dataset.itemId = item.id;
@@ -43,16 +42,16 @@ export function renderReceipt(elements, selections, config) {
     elements.finalList.innerHTML = "";
     selections.forEach(item => {
         const li = document.createElement("li");
-        li.className = "flex justify-between items-center mb-4";
+        li.className = "receipt-item";
         li.innerHTML = `
-            <span class="font-medium">${item.name}</span>
-            <span class="flex-grow border-b border-dotted border-gray-300 mx-2 mt-2"></span>
-            <span class="font-mono text-gray-500">${formatPrice(item.price, currency)}</span>
+            <span class="receipt-item__name">${item.name}</span>
+            <span class="receipt-item__dots"></span>
+            <span class="receipt-item__price">${formatPrice(item.price, currency)}</span>
         `;
         elements.finalList.appendChild(li);
     });
     const totalLi = document.createElement("li");
-    totalLi.className = "flex justify-between items-center mt-6 pt-4 border-t border-gray-800 font-bold";
+    totalLi.className = "receipt-total";
     totalLi.innerHTML = `
         <span>${totalLabel}</span>
         <span>${formatPrice(total, currency)}</span>

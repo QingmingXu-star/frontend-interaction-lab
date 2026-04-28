@@ -3,21 +3,16 @@ import { sleep } from "./utils.js";
 import type { Elements, MenuItem } from "./types.js";
 
 export async function animateToken(elements: Elements, itemName: string): Promise<void> {
-    elements.token.style.transition = "none";
-    elements.token.style.opacity = "0";
-    elements.token.style.transform = "translate(-50%, 0px)";
+    elements.token.classList.remove(UI_CLASSES.tokenVisible, UI_CLASSES.tokenDropping);
     elements.token.innerText = itemName;
 
     elements.token.offsetHeight;
 
-    elements.token.style.transition = "opacity 0.3s ease-out";
-    elements.token.style.opacity = "1";
+    elements.token.classList.add(UI_CLASSES.tokenVisible);
     await sleep(ANIMATION_TIMINGS.tokenFadeInBuffer);
 
-    elements.token.style.transition = "all 0.6s cubic-bezier(0.5, 0, 0.7, 0.4)";
-    elements.token.style.opacity = "0";
-    elements.token.style.transform = "translate(-50%, 50px)";
-
+    elements.token.classList.remove(UI_CLASSES.tokenVisible);
+    elements.token.classList.add(UI_CLASSES.tokenDropping);
     await sleep(ANIMATION_TIMINGS.tokenDropDuration);
 }
 
@@ -33,7 +28,7 @@ export function showReceipt(elements: Elements): void {
 
 export function showToasterStage(elements: Elements): void {
     elements.menuContainer.classList.add("hidden");
-    elements.toasterStage.style.display = "flex";
+    elements.toasterStage.classList.add(UI_CLASSES.toasterStageVisible);
 }
 
 export function markOptionsLeaving(elements: Elements): void {
