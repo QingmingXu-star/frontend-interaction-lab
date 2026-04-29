@@ -6,7 +6,7 @@ An interactive animation demo simulating an Apple-style mobile keyboard. Pure fr
 
 ## Preview
 
-<video src="https://github.com/QingmingXu-star/frontend-interaction-lab/raw/main/demos/keyboard/assets/ScreenRecording.mov" controls autoplay muted loop width="100%"></video>
+<video src="https://github.com/user-attachments/assets/deb9d54a-b0fe-4c3b-a619-f478c005a448" controls autoplay muted loop width="100%"></video>
 
 | Keyboard transform | Typing result |
 |---|---|
