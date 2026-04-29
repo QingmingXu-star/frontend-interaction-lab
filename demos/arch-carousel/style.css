@@ -1,0 +1,148 @@
+:root {
+    --bg-beige: #f5f5dc;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ccc;
+}
+
+.viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-beige);
+    overflow: hidden;
+}
+
+.scroll-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    z-index: 0;
+    will-change: transform;
+}
+
+.arch-unit {
+    position: relative;
+    height: 100%;
+    flex-shrink: 0;
+    transform-origin: center center;
+    transition: transform 0.5s cubic-bezier(0.34, 1.15, 0.64, 1);
+}
+
+.arch-unit--lifted {
+    transform: scale(1.03);
+}
+
+.viewport--zooming {
+    animation: zoom-through 1s cubic-bezier(0.3, 0, 0.8, 0.2) forwards;
+    pointer-events: none;
+}
+
+@keyframes zoom-through {
+    from { transform: scale(1); }
+    to   { transform: scale(8); }
+}
+
+.arch-hit-area {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.second-layer-block {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.content-container {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.content-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.34, 1.15, 0.64, 1);
+}
+
+.arch-unit--lifted .content-container::after {
+    opacity: 1;
+}
+
+.arch-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    object-fit: contain;
+}
+
+.filler-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background: var(--bg-beige);
+    z-index: 5;
+}
+
+.filler-side {
+    position: absolute;
+    bottom: 0;
+    background: var(--bg-beige);
+    z-index: 5;
+}
+
+.side-l { left: 0; }
+.side-r { right: 0; }
+
+.filler-corner {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.third-layer-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.filler-corner svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.yellow { background: #64b5f6; }
+.blue   { background: #64b5f6; }
+.red    { background: #64b5f6; }

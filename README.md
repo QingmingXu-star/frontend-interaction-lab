@@ -4,10 +4,10 @@ A collection of frontend UI and interaction experiments.
 
 This repository serves as a playground for exploring:
 
-* interaction patterns
-* animation techniques
-* UI composition
-* small self-contained interface experiments
+- Interaction patterns
+- Animation techniques
+- UI composition
+- Small self-contained interface experiments
 
 Each experiment is organized as an independent demo under the `demos/` directory.
 
@@ -19,15 +19,24 @@ Each experiment is organized as an independent demo under the `demos/` directory
 
 A step-by-step ordering experience that explores:
 
-* staged user interaction flow
-* animated transitions between steps
-* a “toaster-style” receipt reveal effect
+- Staged user interaction flow
+- Animated transitions between steps
+- A "toaster-style" receipt reveal effect
 
-📂 Path:
+📂 Path: `demos/minimalist-bistro/`
 
-```txt
-demos/minimalist-bistro/
-```
+---
+
+### Arch Carousel
+
+An infinite horizontal carousel with arch-shaped units, exploring:
+
+- Momentum scrolling and elastic snap alignment
+- Multi-layer compositing with SVG and `clip-path`
+- Dual-mode arrow key control (tap to snap / hold to scroll)
+- A click zoom-through effect: upper layer scales to 8× while the content layer expands to fill the screen
+
+📂 Path: `demos/arch-carousel/`
 
 ---
 
@@ -36,9 +45,7 @@ demos/minimalist-bistro/
 ```txt
 demos/
   ├─ minimalist-bistro/
-  ├─ interaction-flow/      (planned)
-  ├─ animation-lab/         (planned)
-  ├─ layout-experiments/    (planned)
+  ├─ arch-carousel/
   └─ more experiments...
 ```
 
@@ -46,26 +53,27 @@ demos/
 
 ## Experiment Philosophy
 
-This repository is organized as a collection of independent experiments:
-
-* Each demo focuses on a specific interaction or visual idea
-* Experiments are intentionally small and self-contained
-* No strict framework or architecture is enforced across demos
-* Code may evolve or be refactored as ideas mature
+- Each demo focuses on a specific interaction or visual idea
+- Experiments are intentionally small and self-contained
+- No strict framework or architecture is enforced across demos
+- Code may evolve or be refactored as ideas mature
 
 ---
 
 ## Tech Stack
 
-* HTML
-* CSS
-* TypeScript
+- HTML
+- CSS
+- TypeScript
+- Vanilla JavaScript (dependency-free experiments)
 
 ---
 
 ## Run a Demo Locally
 
-Example (Minimalist Bistro):
+Each demo has its own setup; refer to its README for details.
+
+Example — Minimalist Bistro:
 
 ```bash
 cd demos/minimalist-bistro
@@ -75,25 +83,22 @@ cd ../..
 python3 -m http.server 8080
 ```
 
-Then open:
+Then open: `http://127.0.0.1:8080/demos/minimalist-bistro/`
 
-```txt
-http://127.0.0.1:8080/demos/minimalist-bistro/
-```
+Arch Carousel is a pure static project — open `demos/arch-carousel/index.html` directly with any static file server.
 
 ---
 
 ## Roadmap
 
-* Add more interaction experiments
-* Explore reusable animation patterns
-* Group experiments by category (interaction / layout / motion)
-* Extract reusable patterns when appropriate
+- Add more interaction experiments
+- Explore reusable animation patterns
+- Group experiments by category (interaction / layout / motion)
+- Extract reusable patterns when appropriate
 
 ---
 
 ## Notes
 
-* This is an experimental repository
-* Structure may evolve over time
-* Some demos may later become standalone projects
+- This is an experimental repository; structure may evolve over time
+- Some demos may later become standalone projects
