@@ -4,9 +4,9 @@ A frontend interaction experiment exploring an infinite horizontal carousel with
 
 ## Preview
 
-<video src="assets/Screen Recording.mov" controls width="100%"></video>
-
 ![](assets/screenshot-page.png)
+
+> 📹 [Watch demo recording](https://github.com/QingmingXu-star/frontend-interaction-lab/releases/tag/v1.0.0)
 
 ## Interaction
 
