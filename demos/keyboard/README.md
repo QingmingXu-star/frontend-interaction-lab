@@ -4,6 +4,16 @@ An interactive animation demo simulating an Apple-style mobile keyboard. Pure fr
 
 ---
 
+## Preview
+
+<video src="https://github.com/QingmingXu-star/frontend-interaction-lab/raw/main/demos/keyboard/assets/Screen%20Recording.mov" controls autoplay muted loop width="100%"></video>
+
+| Keyboard transform | Typing result |
+|---|---|
+| ![keyboard](assets/screenshot_keboard.png) | ![typing](assets/screenshot_typing.png) |
+
+---
+
 ## What It Does
 
 The animation plays automatically in two phases:
