@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["DOM", "ES2017"],
+    "strict": true,
+    "rootDir": ".",
+    "outDir": ".",
+    "noEmit": false
+  },
+  "include": ["script.ts"],
+  "exclude": ["node_modules"]
+}
